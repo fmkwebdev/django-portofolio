@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+    </style>
+  </head>
+  <body>
+
+
+      <div id="bgslider">
+          <figure>
+            {% for i in hatters %}
+              <img src='{{i.hatter}}' alt="Slider">
+            {% endfor %}
+          </figure>
+      </div>
+
+
+      {% for i in cimek %}
+      <div class="container">
+      <p class="Cim" style="font-family: 'Zen Dots', cursive; top: 35%;">{{i.cim}}</p>
+      </div>
+      {% endfor %}
+  </body>
+</html>
