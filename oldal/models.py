@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Oldal(models.Model):
-    hatter = models.ImageField(upload_to="static/images")
+    hatter = models.FileField(upload_to="static/images")
 
 
 class Cimek(models.Model):
